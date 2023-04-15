@@ -61,7 +61,8 @@ def pay():
         transaction_token = transaction['token']
         print(transaction_token)
         return jsonify({
-            "token": "https://app.sandbox.midtrans.com/snap/v2/vtweb/" + transaction_token,
+            "token_url": "https://app.sandbox.midtrans.com/snap/v2/vtweb/" + transaction_token,
+            "token":  transaction_token,
         }), 200
     else:
         return jsonify({
